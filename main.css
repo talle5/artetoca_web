@@ -59,7 +59,7 @@ p {
 
 .main_container {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 30% 70%;
     height: 100dvh;
     width: 100dvw;
 }
@@ -68,6 +68,21 @@ p {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     border: var(--main-border) solid var(--border-color);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 24px 0 24px;
+    gap: 5px;
+
+    img {
+        height: 64px;
+    }
+
+    div h1 {
+        font-size: medium;
+    }
 }
 
 .section1 {
@@ -148,6 +163,7 @@ p {
             width: 24px;
         }
     }
+    
 }
 
 .card_grid {
