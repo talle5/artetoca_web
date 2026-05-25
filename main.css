@@ -283,7 +283,6 @@ iframe {
     }
 }
 
-
 .info_card {
     width: 100%;
     height: 150px;
@@ -303,7 +302,6 @@ iframe {
         background-color: #fef3c6;
     }
 }
-
 
 .event_card {
     display: flex;
