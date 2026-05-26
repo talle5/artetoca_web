@@ -37,7 +37,10 @@ p {
 }
 
 .grid_row {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
 }
 
 .icon {
