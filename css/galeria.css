@@ -34,7 +34,8 @@
 
         .galeria_grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(auto-fit, 180px);
+            justify-content: center;
             justify-items: center;
             gap: 16px;
             padding: 16px;

@@ -10,10 +10,9 @@
     border-radius: 16px;
 
     .pill {
+        border-radius: 16px;
         width: fit-content;
         padding: 4px 10px;
-        border-radius: 16px;
-
 
         &.embreve {
             background: #dbeafe;
@@ -54,12 +53,4 @@
             }
         }
     }
-
-}
-
-.pill {
-    display: inline-flex;
-    border-radius: 16px;
-    width: fit-content;
-    padding: 4px 10px;
 }
