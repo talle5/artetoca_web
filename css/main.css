@@ -81,6 +81,23 @@ p {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     border: var(--main-border) solid var(--border-color);
+
+    .header_logo {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        gap: 8px;
+
+        h1 {
+            font-size: large;
+            font-weight: 600;
+        }
+
+        img {
+            height: 64px;
+            width: 64px;
+        }
+    }
 }
 
 .selected {
