@@ -4,6 +4,12 @@
     color: #858594;
 }
 
+.hover:hover {
+    scale: 1.2;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
 .galeria_body {
     border: var(--main-border) solid var(--border-color);
     border-radius: 16px;
