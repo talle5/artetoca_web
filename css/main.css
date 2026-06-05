@@ -48,14 +48,14 @@ p {
     border-radius: 16px;
 }
 
-.main_container {
+.main_layout {
     display: grid;
     grid-template-columns: minmax(0, 20%) minmax(0, 80%);
     height: 100dvh;
     width: 100%;
 }
 
-.main_container>* {
+.main_layout>* {
     min-width: 0;
     min-height: 0;
 }
