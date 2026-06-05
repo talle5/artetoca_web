@@ -112,7 +112,7 @@ p {
     }
 }
 
-.section2 {
+.main_content {
     display: flex;
     flex-direction: column;
     gap: 16px;
