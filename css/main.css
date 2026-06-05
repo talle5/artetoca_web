@@ -81,12 +81,12 @@ p {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     border: var(--main-border) solid var(--border-color);
-
+    align-items: center;
+    
     .header_logo {
         display: flex;
-        justify-content:center;
-        align-items: center;
         gap: 8px;
+        height: fit-content;
 
         h1 {
             font-size: large;
