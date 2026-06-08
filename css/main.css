@@ -17,7 +17,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: "Google Sans Code", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -113,6 +114,10 @@ header.header {
     align-items: start;
     flex-direction: column;
     gap: 1rem;
+
+    h2 {
+        font-size: 32px;
+    }
 }
 
 .category {
