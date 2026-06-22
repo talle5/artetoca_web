@@ -1,4 +1,4 @@
-import {db, collection, addDoc, getDocs, query, orderBy } from "./firebase_module.js";
+import { db, collection, addDoc, getDocs, query, orderBy } from "./firebase_module.js";
 
 const container = document.querySelector('.main_content');
 
@@ -10,6 +10,12 @@ async function carregarEventos() {
         const evento = doc.data();
         container.insertAdjacentHTML('beforeend', criarCardHTML(evento));
     });
+}
+
+function formatData(data) {
+    const map = ['', 'janeiro', 'fevereiro', 'merço', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+    const splited = data.split('-')
+    return `${splited[0]} de ${map[Number(splited[1])]}, ${splited[2]}`
 }
 
 function criarCardHTML(evento) {
@@ -29,7 +35,7 @@ function criarCardHTML(evento) {
             <div>
                 <div>
                     <img src="../assets/icons/calendario.png" alt="">
-                    <p>${evento.data}</p>
+                    <p>${formatData(evento.data)}</p>
                 </div>
                 <div>
                     <img src="../assets/icons/relogio.png" alt="">
