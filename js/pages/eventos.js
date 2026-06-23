@@ -1,4 +1,4 @@
-import { db, collection, addDoc, getDocs, query, orderBy } from "./firebase_module.js";
+import { db, collection, addDoc, getDocs, query, orderBy } from "../firebase/firebase_module.js";
 
 const container = document.querySelector('.main_content');
 
