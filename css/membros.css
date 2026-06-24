@@ -1,0 +1,97 @@
+@import url(main.css);
+
+.membro_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: max(fit-content, 250px);
+    padding: 16px;
+
+    img {
+        border-radius: 50%;
+    }
+
+    p.nome {
+        font-size: larger;
+        font-weight: 500;
+    }
+
+    p.especialidade {
+        font-size: small;
+        color: #717182;
+    }
+
+    p.tempo {
+        font-size: x-small;
+        color: #717182;
+    }
+}
+
+.info_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+
+    height: 100px;
+
+    div {
+        display: flex;
+        padding: 16px;
+    }
+
+    .info_card_artesoes {
+        background-color: #fef3c6;
+    }
+
+    .info_card_especialidade {
+        background-color: #f3f5ff;
+    }
+
+    .a {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .b{
+        font-size: xx-large;
+    }
+
+    .c {
+        font-size: small;
+        color: #717182;
+    }
+}
+
+
+
+.icon_bg {
+    height: 64px;
+    width: 64px;
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        filter: invert(100);
+    }
+}
+
+.bg_orange {
+        background-color: #fe9a00;
+}
+
+.bg_purple {
+background-color: #ad46ff;
+}
+
+.membros_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 250px);
+    justify-content: center;
+    gap: 16px;
+}
