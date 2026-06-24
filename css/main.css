@@ -61,7 +61,7 @@ p {
     min-height: 0;
 }
 
-.nav_bar {
+#nav_bar {
     display: grid;
     grid-template-rows: 1fr 2fr 1fr;
     border: var(--main-border) solid var(--border-color);
