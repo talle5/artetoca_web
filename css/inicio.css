@@ -77,7 +77,41 @@
     }
 }
 
+
+.icon_bg {
+    width: 40px;
+    height: 40px;
+    border-radius: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dbeafe;
+}
+
+.mapa_header {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 16px;
+    gap: 16px;
+
+    p {
+        font-size: small;
+        color: var(--font-color-1)
+    }
+
+    .titulo {
+        font-size: larger;
+        font-weight: 500;
+    }
+}
+
+
 iframe {
-    max-width: 100%;
-    border-radius: 16px;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    border-color: var(--border-color);
 }
