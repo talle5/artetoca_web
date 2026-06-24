@@ -1,38 +1,37 @@
 @import url('main.css');
 
-table {
+form {
 
     width: 100%;
     padding: 24px;
-    border-radius: 16px;
 
-    thead th {
-        padding-left: 8px;
-        text-align: left;
+    .tab-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
-    tbody tr td {
+    .full {
+        grid-column: 1 / -1;
+    }
+
+    .cell {
         padding: 8px;
+    }
 
-        p {
-            margin-bottom: 8px;
-        }
+    .form_input {
+        width: 100%;
+        min-height: 40px;
+        padding: 0 8px 0 8px;
+        border: var(--main-border) solid var(--border-color);
+        border-radius: 16px;
+    }
 
-        .form_input {
-            width: 100%;
-            min-height: 40px;
-            padding: 0 8px 0 8px;
-            border: var(--main-border) solid var(--border-color);
-            border-radius: 16px;
-        }
-
-        textarea {
-            height: 150px;
-        }
+    textarea {
+        height: 150px;
     }
 
     button {
-        width: 70%;
+        width: 95%;
         height: 40px;
         background: #030213;
         border-style: none;
@@ -45,7 +44,6 @@ table {
             color: white;
             margin: 0 !important;
         }
-
     }
 }
 

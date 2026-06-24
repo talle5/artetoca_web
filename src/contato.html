@@ -47,43 +47,33 @@
                 Estamos aqui para responder suas dúvidas e receber suas sugestões
             </p>
         </header>
-        <table class="border_round">
-            <thead>
-                <h2>Envie uma Mensagem</h2>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <p>Nome</p>
-                        <input type="text" id="nome" class="form_input">
-                    </td>
-                    <td>
-                        <p>Email</p>
-                        <input type="text" id="email" class="form_input">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <p>Assunto</p>
-                        <input type="text" name="" id="assunto" class="form_input">
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <p>Mensagem</p>
-                        <textarea type="text" id="mensagem" class="form_input"> </textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button>
-                            <img src="" alt="">
-                            <p>Enviar mensagem</p>
-                        </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <form class="border_round">
+            <h2>Envie uma Mensagem</h2>
+            <div class="tab-grid">
+                <div class="cell">
+                    <label>Nome</label>
+                    <input type="text" id="nome" class="form_input">
+                </div>
+                <div class="cell">
+                    <label>Email</label>
+                    <input type="text" id="email" class="form_input">
+                </div>
+                <div class="cell full">
+                    <label>Assunto</label>
+                    <input type="text" name="" id="assunto" class="form_input">
+                </div>
+                <div class="cell full">
+                    <label>Mensagem</label>
+                    <textarea type="text" id="mensagem" class="form_input"> </textarea>
+                </div>
+
+                <button>
+                    <img src="" alt="">
+                    <p>Enviar mensagem</p>
+                </button>
+
+            </div>
+        </form>
         <div class="info_card">
             <div class="icon_bg">
                 <img src="../assets/icons/mapas-e-bandeiras.png" alt="">
