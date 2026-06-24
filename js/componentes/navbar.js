@@ -15,7 +15,7 @@ navBar.innerHTML = `
         <img src="../assets/icons/icon.png" alt="">
         <div>
             <h1>Associação dos Artesãos</h1>
-            <p>Ocara</p>
+            <p class="gray_text_color">Ocara</p>
         </div>
     </div>
     <div class="grid_row">

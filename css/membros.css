@@ -21,12 +21,10 @@
 
     p.especialidade {
         font-size: small;
-        color: #717182;
     }
 
     p.tempo {
         font-size: x-small;
-        color: #717182;
     }
 }
 
@@ -34,8 +32,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-
-    height: 100px;
 
     div {
         display: flex;
@@ -55,13 +51,12 @@
         flex-direction: column;
     }
 
-    .b{
+    .b {
         font-size: xx-large;
     }
 
     .c {
         font-size: small;
-        color: #717182;
     }
 }
 
@@ -82,11 +77,11 @@
 }
 
 .bg_orange {
-        background-color: #fe9a00;
+    background-color: #fe9a00;
 }
 
 .bg_purple {
-background-color: #ad46ff;
+    background-color: #ad46ff;
 }
 
 .membros_grid {
@@ -94,4 +89,66 @@ background-color: #ad46ff;
     grid-template-columns: repeat(auto-fit, 250px);
     justify-content: center;
     gap: 16px;
+}
+
+
+.membro_description_window {
+    width: 50vw;
+    border: 24px;
+}
+
+.membro_description {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 16px;
+    gap: 16px;
+    background: white;
+}
+
+
+.info_header {
+    background: #ffc800;
+    background: linear-gradient(170deg, rgba(255, 200, 0, 1) 0%, rgba(253, 29, 29, 1) 63%);
+    height: 96px;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
+}
+
+.pill {
+    padding: 8px;
+
+    &.trabalho {
+        background: #fffbeb;
+        border-color: #fee993;
+        color: #bb4f00;
+    }
+
+    &.instagram {
+        background: #ececf0;
+        color: #747485;
+    }
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.gap_8 {
+    gap: 8px;
+}
+
+.focus_bg {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
 }

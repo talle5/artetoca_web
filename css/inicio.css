@@ -39,10 +39,6 @@
     flex-direction: column;
     gap: 16px;
 
-    p {
-        color: var(--font-color-1);
-    }
-
     ol {
         display: grid;
         list-style: none;
@@ -99,7 +95,6 @@
 
     p {
         font-size: small;
-        color: var(--font-color-1)
     }
 
     .titulo {

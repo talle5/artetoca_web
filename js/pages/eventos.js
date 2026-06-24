@@ -31,8 +31,8 @@ function criarCardHTML(evento) {
             <div class="pill ${statusClasse}">
                 <p>${evento.status}</p>
             </div>
-            <p>${evento.descricao}</p>
-            <div>
+            <p class="gray_text_color">${evento.descricao}</p>
+            <div class="gray_text_color">
                 <div>
                     <img src="../assets/icons/calendario.png" alt="">
                     <p>${formatData(evento.data)}</p>

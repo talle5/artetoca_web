@@ -134,3 +134,7 @@ header.header {
         color: #030213;
     }
 }
+
+.gray_text_color {
+    color: var(--font-color-1);
+}
