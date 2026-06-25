@@ -25,7 +25,8 @@ h3 {
     font-style: normal;
 }
 
-p {
+p,
+label {
     font-family: "Google Sans Code", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -152,7 +153,7 @@ header.header {
     font-size: 16px;
 }
 
-.font_size_4{
+.font_size_4 {
     font-size: 32px;
 }
 
