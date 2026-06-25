@@ -16,14 +16,6 @@
         font-size: larger;
         font-weight: 500;
     }
-
-    p.especialidade {
-        font-size: small;
-    }
-
-    p.tempo {
-        font-size: x-small;
-    }
 }
 
 .info_card {
@@ -44,19 +36,6 @@
 
     .info_card_especialidade {
         background-color: #f3f5ff;
-    }
-
-    .a {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .b {
-        font-size: xx-large;
-    }
-
-    .c {
-        font-size: small;
     }
 }
 
@@ -144,15 +123,6 @@
         background: #ececf0;
         color: #747485;
     }
-}
-
-.flex_row {
-    display: flex;
-    flex-direction: row;
-}
-
-.gap_8 {
-    gap: 8px;
 }
 
 #modal_overlay {

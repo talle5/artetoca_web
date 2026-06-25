@@ -138,3 +138,34 @@ header.header {
 .gray_text_color {
     color: var(--font-color-1);
 }
+
+
+.font_size_1 {
+    font-size: 10px;
+}
+
+.font_size_2 {
+    font-size: 12px;
+}
+
+.font_size_3 {
+    font-size: 16px;
+}
+
+.font_size_4{
+    font-size: 32px;
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+}
+
+.gap_8 {
+    gap: 8px;
+}

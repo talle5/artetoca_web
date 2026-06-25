@@ -81,8 +81,8 @@ function criarMembroCardHTML(artesao, id) {
         <div class="membro_card border_round" data-id="${id}" style="cursor: pointer;">
             <img src="${artesao.img}" alt="${artesao.nome}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;">
             <p class="nome">${artesao.nome}</p>
-            <p class="especialidade gray_text_color">${categoria}</p>
-            <p class="tempo gray_text_color">Desde ${artesao.data || '2018'}</p>
+            <p class="font_size_2 gray_text_color">${categoria}</p>
+            <p class="font_size_1 gray_text_color">Desde ${artesao.data || '2018'}</p>
         </div>
     `;
 }

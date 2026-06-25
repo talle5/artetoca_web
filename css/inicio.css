@@ -93,10 +93,6 @@
     padding: 16px;
     gap: 16px;
 
-    p {
-        font-size: small;
-    }
-
     .titulo {
         font-size: larger;
         font-weight: 500;
