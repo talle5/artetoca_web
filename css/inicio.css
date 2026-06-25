@@ -5,8 +5,6 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    border: var(--main-border) solid var(--border-color);
-    border-radius: 16px;
 
     div.icon {
         background: #e9ebef;
@@ -32,8 +30,6 @@
 }
 
 .about {
-    border: var(--main-border) solid var(--border-color);
-    border-radius: 16px;
     padding: 16px;
     display: flex;
     flex-direction: column;
