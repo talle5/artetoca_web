@@ -18,17 +18,17 @@
     }
 }
 
-.info_card {
+.info_line {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
+}
 
-
-    div {
-        display: flex;
-        padding: 16px;
-        align-items: center;
-    }
+.info_card {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
 
     .info_card_artesoes {
         background-color: #fef3c6;

@@ -62,5 +62,12 @@ form {
         border-radius: 16px;
         background-color: #fef3c6;
         display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon {
+            width: 24px;
+            height: 24px;
+        }
     }
 }

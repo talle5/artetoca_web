@@ -140,7 +140,6 @@ header.header {
     color: var(--font-color-1);
 }
 
-
 .font_size_1 {
     font-size: 10px;
 }
@@ -165,8 +164,4 @@ header.header {
 .flex_col {
     display: flex;
     flex-direction: column;
-}
-
-.gap_8 {
-    gap: 8px;
 }
