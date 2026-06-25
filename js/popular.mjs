@@ -49,37 +49,37 @@ const eventos = [{
 const artesoes = [
     {
         nome: "Aldo Batista",
-        descricao: "Categoria: Papel Machê. Utilizando materiais diversos como papel machê, massas artesanais, colas, castanhas, palhas, madeira de refugo e cabaças, Aldo transforma elementos simples e naturais em peças que retratam a identidade cultural do sertão nordestino. Preço das peças: R$ 40,00.",
+        descricao: "Categoria: Papel Machê. Utilizando materiais diversos como papel machê, massas artesanais, colas, castanhas, palhas, madeira de refugo e cabaças, Aldo transforma elementos simples e naturais em peças que retratam a identidade cultural do sertão nordestino.",
         data: "2025",
         img: "https://githubraw.com/profBruno-UFC-Qx/classroom-mobile-final-artetoca/main/perfil/aldo.png"
     },
     {
         nome: "Laís Almeida",
-        descricao: "Categoria: Bordado. Além de universitária, Laís trabalha com crochê e bordado de forma moderna e criativa. Suas bolsas, biquínis e acessórios unem estilo e arte, valorizando o artesanato como expressão contemporânea e autoral. Preço das peças: R$ 70,00.",
+        descricao: "Categoria: Bordado. Além de universitária, Laís trabalha com crochê e bordado de forma moderna e criativa. Suas bolsas, biquínis e acessórios unem estilo e arte, valorizando o artesanato como expressão contemporânea e autoral.",
         data: "2025",
         img: "https://githubraw.com/profBruno-UFC-Qx/classroom-mobile-final-artetoca/main/perfil/lais-almeida.png"
     },
     {
         nome: "Dami Mendes",
-        descricao: "Categoria: Quadros/Pinturas. Dami é um grande exemplo de superação, sensibilidade e amor pela arte. Ao começar a perder a audição, Eudami Mendes encontrou na arte não apenas um meio de expressão, mas também uma forma de mostrar ao mundo a força e a beleza que brotam de suas mãos talentosas e inquietas. Preço das peças: R$ 80,00.",
+        descricao: "Categoria: Quadros/Pinturas. Dami é um grande exemplo de superação, sensibilidade e amor pela arte. Ao começar a perder a audição, Eudami Mendes encontrou na arte não apenas um meio de expressão, mas também uma forma de mostrar ao mundo a força e a beleza que brotam de suas mãos talentosas e inquietas.",
         data: "2025",
         img: "https://githubraw.com/profBruno-UFC-Qx/classroom-mobile-final-artetoca/main/perfil/Eudami.jpg"
     },
     {
         nome: "Mônica Gomes",
-        descricao: "Categoria: Crochê. Neta de Maria Evangelista Gomes, uma artesã de mão cheia, que fazia panelas, cuscuzeiras, tachos (frigideira) de barro e peças com palhas de carnaúba. Com crochê, Mônica produz peças delicadas e cheias de estilo. Preço das peças: R$ 70,00.",
+        descricao: "Categoria: Crochê. Neta de Maria Evangelista Gomes, uma artesã de mão cheia, que fazia panelas, cuscuzeiras, tachos (frigideira) de barro e peças com palhas de carnaúba. Com crochê, Mônica produz peças delicadas e cheias de estilo.",
         data: "2025",
         img: "https://githubraw.com/profBruno-UFC-Qx/classroom-mobile-final-artetoca/main/perfil/monica.png"
     },
     {
         nome: "Ritinha",
-        descricao: "Categoria: Macramê. Apaixonada por plantas, Ritinha começou a produzir macramê quando viajou durante a pandemia para a Fortaleza. Encantada por um suporte que viu em uma loja, perguntou do que era feito e descobriu o macramê. Atualmente produz peças e ministra oficinas de Macramê em escolas e associações de artesãos. Preço das peças: R$ 30,00 (suporte), R$ 120,00 (vestuário).",
+        descricao: "Categoria: Macramê. Apaixonada por plantas, Ritinha começou a produzir macramê quando viajou durante a pandemia para a Fortaleza. Encantada por um suporte que viu em uma loja, perguntou do que era feito e descobriu o macramê. Atualmente produz peças e ministra oficinas de Macramê em escolas e associações de artesãos.",
         data: "2025",
         img: "https://githubraw.com/profBruno-UFC-Qx/classroom-mobile-final-artetoca/main/perfil/ritinha.png"
     },
     {
         nome: "Neidinha",
-        descricao: "Categoria: Palha. Cozinheira de mão cheia, Neidinha também produz objetos de palha de carnaúba e bananeira. Preços: bolsa (R$ 60,00), itens de cozinha (R$ 40,00).",
+        descricao: "Categoria: Palha. Cozinheira de mão cheia, Neidinha também produz objetos de palha de carnaúba e bananeira.",
         data: "2026",
         img: "https://githubraw.com/profBruno-UFC-Qx/classroom-mobile-final-artetoca/main/perfil/neidinha.jpeg"
     }
