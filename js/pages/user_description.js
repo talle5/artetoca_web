@@ -1,27 +1,9 @@
 
-import { db, collection, getDocs, query, orderBy } from "../firebase/firebase_module.js";
+import { getMembros } from '../repository.js';
 
 // Container onde os membros serão exibidos
 const membrosGrid = document.getElementById('membros_grid');
 const descriptionWindow = document.getElementById('description_window');
-
-// Função para parsear a descrição longa vinda do banco
-function extrairInfoArtesao(descricaoCompleta) {
-    let categoria = "Artesanato";
-    let descricaoLimpa = descricaoCompleta;
-
-    if (!descricaoCompleta) {
-        return { categoria, descricaoLimpa: "" };
-    }
-
-    // Extrai categoria (ex: "Categoria: Papel Machê.")
-    const catMatch = descricaoCompleta.match(/Categoria:\s*([^.]+)/i);
-    if (catMatch) {
-        categoria = catMatch[1].trim();
-        descricaoLimpa = descricaoLimpa.replace(/Categoria:\s*[^.]+\.\s*/i, "");
-    }
-    return { categoria, descricaoLimpa };
-}
 
 // Gera o nome do Instagram com base no nome do artesão
 function gerarInstagram(nome) {
@@ -36,7 +18,6 @@ function gerarInstagram(nome) {
 
 // Abre o modal de descrição com os dados dinâmicos do artesão
 function showDescriptionWindow(artesao) {
-    const { categoria, descricaoLimpa } = extrairInfoArtesao(artesao.descricao);
     const instagram = gerarInstagram(artesao.nome);
 
     descriptionWindow.innerHTML = `
@@ -48,9 +29,9 @@ function showDescriptionWindow(artesao) {
                 <div class="membro_description font_small">
                     <img class="border_round" src="${artesao.img}" alt="${artesao.nome}" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 4px solid white; position: relative; z-index: 10; margin-top: -76px; background-color: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
                     <h2>${artesao.nome}</h2>
-                    <p style="color:#e17200">${categoria}</p>
+                    <p style="color:#e17200">${artesao.categoria}</p>
                     <p class="gray_text_color">Ocara, CE</p>
-                    <p class="gray_text_color">${descricaoLimpa}</p>
+                    <p class="gray_text_color">${artesao.descricao}</p>
                     <p class="pill instagram border_round">${instagram}</p>
                 </div>
             </div>
@@ -76,13 +57,12 @@ function closeDescriptionWindow() {
 
 // Cria o HTML do cartão de membro na lista
 function criarMembroCardHTML(artesao, id) {
-    const { categoria } = extrairInfoArtesao(artesao.descricao);
     return `
         <div class="membro_card border_round" data-id="${id}" style="cursor: pointer;">
             <img src="${artesao.img}" alt="${artesao.nome}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;">
             <p class="nome">${artesao.nome}</p>
-            <p class="font_size_2 gray_text_color">${categoria}</p>
-            <p class="font_size_1 gray_text_color">Desde ${artesao.data || '2018'}</p>
+            <p class="font_size_2 gray_text_color">${artesao.categoria}</p>
+            <p class="font_size_1 gray_text_color">${artesao.data}</p>
         </div>
     `;
 }
@@ -90,19 +70,10 @@ function criarMembroCardHTML(artesao, id) {
 // Carrega os artesãos do Firestore
 async function carregarMembros() {
     try {
-        const q = query(collection(db, "artesoes"), orderBy("nome"));
-        const snapshot = await getDocs(q);
+        const membros = await getMembros();
 
-        // Limpa a grid estática antes de carregar
-        membrosGrid.innerHTML = '';
-
-        const listaArtesoes = [];
-
-        snapshot.forEach((doc) => {
-            const artesao = doc.data();
-            const id = doc.id;
-            listaArtesoes.push({ id, ...artesao });
-            membrosGrid.insertAdjacentHTML('beforeend', criarMembroCardHTML(artesao, id));
+        membros.forEach(membro => {
+            membrosGrid.insertAdjacentHTML('beforeend', criarMembroCardHTML(membro));
         });
 
         // Configura evento de clique nos cartões (event delegation)
@@ -122,5 +93,4 @@ async function carregarMembros() {
     }
 }
 
-// Inicializa o carregamento ao carregar o script
 carregarMembros();

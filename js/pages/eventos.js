@@ -1,16 +1,4 @@
-import { db, collection, addDoc, getDocs, query, orderBy } from "../firebase/firebase_module.js";
-
-const container = document.querySelector('.main_content');
-
-async function carregarEventos() {
-    const q = query(collection(db, "eventos"), orderBy("data"));
-    const snapshot = await getDocs(q);
-
-    snapshot.forEach((doc) => {
-        const evento = doc.data();
-        container.insertAdjacentHTML('beforeend', criarCardHTML(evento));
-    });
-}
+import { getEventos } from "../repository.js";
 
 function formatData(data) {
     const map = ['', 'janeiro', 'fevereiro', 'merço', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
@@ -42,7 +30,7 @@ function criarCardHTML(evento) {
                     <p>${evento.hora_inicio} - ${evento.hora_termino}</p>
                 </div>
                 <div>
-                    <img src="../assets/icons/mapas-e-bandeiras.png" alt="">
+                    <img src="../assets/icons/mapas.png" alt="">
                     <p>${evento.local}</p>
                 </div>
             </div>
@@ -50,4 +38,8 @@ function criarCardHTML(evento) {
     `;
 }
 
-carregarEventos();
+const container = document.querySelector('.main_content');
+const eventos = await getEventos();
+eventos.forEach(evento => {
+    container.insertAdjacentHTML('beforeend', criarCardHTML(evento));
+});
