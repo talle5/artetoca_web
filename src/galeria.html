@@ -11,17 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@300..800&display=swap" rel="stylesheet">
     <script src="https://www.gstatic.com/firebasejs/12.11.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore-compat.js"></script>
-    <script type="module" src="../js/firebase_module.js"></script>
+    <script type="module" src="../js/firebase/firebase_module.js"></script>
 </head>
 
 <body class="main_layout">
     <div id="nav_bar"></div>
-    <main class="main_content galeria">
+    <main class="main_content">
         <header class="header">
             <h2>Galeria de Fotos</h2>
             <p class="gray_text_color">Confira os momentos especiais e trabalhos dos nossos artesãos</p>
         </header>
-
         <div class="border_round">
             <div class="galeria_header">
                 <div class="icon_bg">
@@ -32,7 +31,7 @@
                     <p class="gray_text_color">16 fotos</p>
                 </div>
             </div>
-            <div class="galeria_grid">
+            <div id="galeria" class="galeria_grid">
                 <img class="hover" src="../assets/galeria/1.jpg">
                 <img class="hover" src="../assets/galeria/2.png">
                 <img class="hover" src="../assets/galeria/3.jpg">
@@ -51,8 +50,10 @@
                 <img class="hover" src="../assets/galeria/16.jpg">
             </div>
         </div>
+        <div id="image_viwer"></div>
     </main>
     <script src="../js/componentes/navbar.js"></script>
+    <script src="../js/pages/galeria.js"></script>
 </body>
 
 </html>

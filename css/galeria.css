@@ -1,9 +1,5 @@
 @import url('main.css');
 
-.galeria.p {
-    color: #858594;
-}
-
 .hover:hover {
     scale: 1.2;
     cursor: pointer;
@@ -42,4 +38,27 @@
         border-radius: 16px;
     }
 
+}
+
+.modal_overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.863);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#close_modal_btn {
+    position: absolute;
+    cursor: pointer;
+    bottom: 93%;
+    left: 97%;
+    height: 24px;
+}
+
+.img_view {
+    height: 80vh;
 }
