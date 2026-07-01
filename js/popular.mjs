@@ -106,14 +106,13 @@ async function popular() {
             console.log(`Artesão adicionado com ID: ${ref.id}`);
         }
 
-        console.log("✅ Banco de dados populado com sucesso!");
-        process.exit(0); // Encerra o script com sucesso
-        
+        console.log("Banco de dados populado com sucesso!");
+        process.exit(0);
+
     } catch (error) {
-        console.error("❌ Erro ao popular o Firebase:", error);
-        process.exit(1); // Encerra o script com erro
+        console.error("Erro ao popular o Firebase:", error);
+        process.exit(1);
     }
 }
 
-// 6. Executa a função
 popular();

@@ -1,22 +1,18 @@
-
 import { getMembros } from '../repository.js';
 
-// Container onde os membros serão exibidos
 const membrosGrid = document.getElementById('membros_grid');
 const descriptionWindow = document.getElementById('description_window');
 
-// Gera o nome do Instagram com base no nome do artesão
 function gerarInstagram(nome) {
     if (!nome) return "@artesao";
     const nomeLimpo = nome
         .toLowerCase()
         .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "") // Remove acentos
-        .replace(/\s+/g, "."); // Substitui espaços por pontos
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/\s+/g, ".");
     return `@${nomeLimpo}`;
 }
 
-// Abre o modal de descrição com os dados dinâmicos do artesão
 function showDescriptionWindow(artesao) {
     const instagram = gerarInstagram(artesao.nome);
 
@@ -29,7 +25,7 @@ function showDescriptionWindow(artesao) {
                 <div class="membro_description font_small">
                     <img class="border_round" src="${artesao.img}" alt="${artesao.nome}" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 4px solid white; position: relative; z-index: 10; margin-top: -76px; background-color: white; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);">
                     <h2>${artesao.nome}</h2>
-                    <p style="color:#e17200">${artesao.categoria}</p>
+                    <p style="color:#e17200">${artesao.especialidade}</p>
                     <p class="gray_text_color">Ocara, CE</p>
                     <p class="gray_text_color">${artesao.descricao}</p>
                     <p class="pill instagram border_round">${instagram}</p>
@@ -38,10 +34,7 @@ function showDescriptionWindow(artesao) {
         </div>
     `;
 
-    // Adiciona evento de fechar ao clicar no botão "X"
     document.getElementById('close_modal_btn').addEventListener('click', closeDescriptionWindow);
-
-    // Adiciona evento de fechar ao clicar no fundo escuro (overlay)
     const overlay = document.getElementById('modal_overlay');
     overlay.addEventListener('click', (event) => {
         if (event.target === overlay) {
@@ -50,38 +43,34 @@ function showDescriptionWindow(artesao) {
     });
 }
 
-// Fecha o modal de descrição
 function closeDescriptionWindow() {
     descriptionWindow.innerHTML = '';
 }
 
-// Cria o HTML do cartão de membro na lista
 function criarMembroCardHTML(artesao, id) {
     return `
         <div class="membro_card border_round" data-id="${id}" style="cursor: pointer;">
             <img src="${artesao.img}" alt="${artesao.nome}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;">
             <p class="nome">${artesao.nome}</p>
-            <p class="font_size_2 gray_text_color">${artesao.categoria}</p>
+            <p class="font_size_2 gray_text_color">${artesao.especialidade}</p>
             <p class="font_size_1 gray_text_color">${artesao.data}</p>
         </div>
     `;
 }
 
-// Carrega os artesãos do Firestore
 async function carregarMembros() {
     try {
         const membros = await getMembros();
 
         membros.forEach(membro => {
-            membrosGrid.insertAdjacentHTML('beforeend', criarMembroCardHTML(membro));
+            membrosGrid.insertAdjacentHTML('beforeend', criarMembroCardHTML(membro, membro.id));
         });
 
-        // Configura evento de clique nos cartões (event delegation)
         membrosGrid.addEventListener('click', (event) => {
             const card = event.target.closest('.membro_card');
             if (card) {
                 const artesaoId = card.getAttribute('data-id');
-                const artesaoSelecionado = listaArtesoes.find(a => a.id === artesaoId);
+                const artesaoSelecionado = membros.find(a => a.id === artesaoId);
                 if (artesaoSelecionado) {
                     showDescriptionWindow(artesaoSelecionado);
                 }
