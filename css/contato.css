@@ -56,11 +56,12 @@ form {
     align-items: start;
     gap: 16px;
 
+    background-color: white;
+
     .icon_bg {
         width: 64px;
         height: 64px;
         border-radius: 16px;
-        background-color: #fef3c6;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -68,6 +69,31 @@ form {
         .icon {
             width: 24px;
             height: 24px;
+            filter: invert(100%)
         }
     }
+
+    p {
+        margin-bottom: 4px;
+    }
+
+    &:hover {
+        filter: invert(5%);
+    }
+}
+
+#whatszap_card .icon_bg {
+    background-color: #81D74A;
+}
+
+#email_card .icon_bg {
+    background-color: #FFCE89;
+}
+
+#instagram_card .icon_bg {
+    background-color: #b30beb;
+}
+
+#address_card .icon_bg {
+    background-color: aqua;
 }
