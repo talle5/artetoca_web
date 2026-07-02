@@ -30,7 +30,7 @@ function criarCardHTML(evento) {
                     <p>${evento.hora_inicio} - ${evento.hora_termino}</p>
                 </div>
                 <div>
-                    <img src="../assets/icons/mapas.png" alt="">
+                    <img src="../assets/icons/mapas_.png" alt="">
                     <p>${evento.local}</p>
                 </div>
             </div>
