@@ -20,26 +20,25 @@
                 Estamos aqui para responder suas dúvidas e receber suas sugestões
             </p>
         </header>
-        <form class="border_round">
+        <form action="https://formspree.io/f/mojopdqj" method="POST" class="border_round">
             <h2 class="cell full">Envie uma Mensagem</h2>
-            <div class="cell">
-                <label>Nome</label>
-                <input type="text" id="nome" class="form_input border_round">
-            </div>
-            <div class="cell">
-                <label>Email</label>
-                <input type="text" id="email" class="form_input border_round">
-            </div>
-            <div class="cell full">
-                <label>Assunto</label>
-                <input type="text" name="" id="assunto" class="form_input border_round">
-            </div>
-            <div class="cell full">
-                <label>Mensagem</label>
-                <textarea type="text" id="mensagem" class="form_input border_round"> </textarea>
-            </div>
-            <button>
-                <img src="" alt="">
+            <label class="cell">
+                Nome
+                <input type="text" id="nome" name="Nome" class="form_input border_round" required>
+            </label>
+            <label class="cell">
+                Email
+                <input type="email" id="email" name="Email" class="form_input border_round" required>
+            </label>
+            <label class="cell full">
+                Assunto
+                <input type="text" id="assunto" name="Assunto" class="form_input border_round">
+            </label>
+            <label class="cell full">
+                Mensagem
+                <textarea id="message" name="Mensagem" class="form_input border_round" required></textarea>
+            </label>
+            <button type="submit">
                 <p>Enviar mensagem</p>
             </button>
         </form>
@@ -75,7 +74,7 @@
             <div class="icon_bg">
                 <img class="icon" src="../assets/icons/mapas_.png" alt="">
             </div>
-            <a href="https://maps.app.goo.gl/sePDfc9qcdgETPyh9"  target="_blank">
+            <a href="https://maps.app.goo.gl/sePDfc9qcdgETPyh9" target="_blank">
                 <p>Endereço</p>
                 <p class="gray_text_color">Arena Kactus - Ocara / CE</p>
             </a>
